@@ -31,5 +31,21 @@ Este é um aplicativo de lista de tarefas desenvolvido com Node.js e EJS. O obje
    
 2. Navegue até o diretório do projeto:
 
+   ```bash
+   cd minha-aplicacao-tarefas
+
+3. Instale as dependências do projeto:
+
+   ```bash
+   npm install
+
+4. Configure a conexão com o banco de dados em database/connection.js.
+
+5. Inicie o servidor:
+   ```bash
+   node index.js
+
+7. Acesse o aplicativo em http://localhost:4000.
+
 
    
