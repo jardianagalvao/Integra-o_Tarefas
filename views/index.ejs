@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Caminho corrigido -->
+    <script>
+        // Função para confirmar a deleção
+        function confirmDelete(url) {
+            if (confirm("Tem certeza que deseja deletar esta tarefa?")) {
+                window.location.href = url; // Redireciona para a URL de deleção
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <a href="/create">Adicionar Tarefa</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Data Criação</th>
+                <th>Data Finalização</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% tarefas.forEach(tarefa => { %>
+                <tr>
+                    <td><%= tarefa.titulo %></td>
+                    <td><%= tarefa.descricao %></td>
+                    <td><%= new Date(tarefa.data_criacao).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }) %></td>
+                    <td><%= tarefa.data_finalizacao ? new Date(tarefa.data_finalizacao).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }) : 'Sem data' %></td>
+                    <td>
+                        <a href="/edit/<%= tarefa.tarefa_id %>">Editar</a>
+                        <a href="#" onclick="confirmDelete('/deletar/<%= tarefa.tarefa_id %>')">Deletar</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
