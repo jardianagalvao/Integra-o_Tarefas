@@ -1,4 +1,6 @@
 # Lista de Tarefas
+Disciplina: Téc de Integração de Sistemas - Unifor
+Professor: Ronninson Vidal
 
 Este é um aplicativo de lista de tarefas desenvolvido com Node.js e EJS. O objetivo do projeto é permitir que os usuários criem, editem e excluam tarefas, além de visualizar a lista de tarefas criadas.
 
