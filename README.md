@@ -29,7 +29,7 @@ Este é um aplicativo de lista de tarefas desenvolvido com Node.js e EJS. O obje
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/minha-aplicacao-tarefas.git
+   git clone https://github.com/seu-usuario/lista_de_tarefas.git
    
 2. Navegue até o diretório do projeto:
 
